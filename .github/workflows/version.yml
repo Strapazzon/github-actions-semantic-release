@@ -1,0 +1,29 @@
+
+name: Version
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:         # Don't trigger on files that are updated by the CI
+      - package.json
+      - package-lock.json
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - run: npm ci
+
+      - uses: codfish/semantic-release-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: echo ${{ steps.semantic.outputs.release-version }}
+
+      - run: echo "$OUTPUTS"
+        env:
+          OUTPUTS: ${{ toJson(steps.semantic.outputs) }}
+      
+      
