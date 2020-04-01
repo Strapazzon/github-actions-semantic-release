@@ -3,7 +3,7 @@ name: Version
 on:
   push:
     branches: [ master ]
-    paths-ignore:         # Don't trigger on files that are updated by the CI
+    paths-ignore:
       - package.json
       - package-lock.json
 
