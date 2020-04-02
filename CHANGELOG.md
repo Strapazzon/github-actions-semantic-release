@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Strapazzon/github-actions-semantic-release/compare/v1.1.0...v1.2.0) (2020-04-02)
+
+
+### Features
+
+* **fix ci:** fix CI ([bb4ecbd](https://github.com/Strapazzon/github-actions-semantic-release/commit/bb4ecbdaad9f76b74a3b44d476ae1655fa47bc0a))
+
 # [1.1.0](https://github.com/Strapazzon/github-actions-semantic-release/compare/v1.0.0...v1.1.0) (2020-04-02)
 
 
